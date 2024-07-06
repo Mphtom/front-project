@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-image: url(green4.jpg);
+    position: relative;
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.frame {
+    margin-right: 30%;
+    width: 370px;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.email,
+.password {
+    width: 100%;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.email input,
+.password input {
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    font-weight: bold;
+    color: white;
+}
+
+.email input::placeholder,
+.password input::placeholder {
+    color: white;
+    font-weight: bold;
+}
+
+.email img,
+.password img {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.remember_forgot {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.remember_forgot .remember {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: white;
+    font-weight: bold;
+}
+
+.remember_forgot .remember input {
+    margin-right: 0.5rem;
+}
+
+.remember_forgot .forgot a {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.log {
+    width: 100%;
+    padding: 12px;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: white;
+    color: rgb(0, 245, 33);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.log:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.reg {
+    margin-top: 1.5rem;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.reg a {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
