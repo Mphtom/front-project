@@ -15,6 +15,7 @@ body {
     background-size: cover;
     background-image: url(green4.jpg);
     position: relative;
+    animation: fadeIn 2s ease-in-out;
 }
 
 body:before {
@@ -25,17 +26,24 @@ body:before {
 }
 
 .frame {
+    position: relative;
+    display: grid;
+
+    padding-right: 20px;
+
+
+
+    background-color: rgba(151, 160, 146, 0.585);
+    /* Light Gray with higher opacity for better readability */
+    border: 3px solid #577261;
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    width: 350px;
     margin-right: 30%;
-    width: 370px;
-    padding: 20px;
-    border: 1px solid white;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px);
-    background-color: rgba(255, 255, 255, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+    backdrop-filter: blur(10px);
+    animation: slideIn 0.5s ease-out;
 }
 
 .login {
@@ -45,6 +53,7 @@ body:before {
     margin-top: 0.5rem;
     margin-bottom: 2rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: zoomIn 1s ease-in-out;
 }
 
 .email,
@@ -64,11 +73,12 @@ body:before {
     outline: none;
     font-weight: bold;
     color: white;
+    transition: background 0.3s, color 0.3s;
 }
 
 .email input::placeholder,
 .password input::placeholder {
-    color: white;
+    color: rgba(62, 58, 58, 0.485);
     font-weight: bold;
 }
 
@@ -108,33 +118,77 @@ body:before {
 }
 
 .log {
-    width: 100%;
-    padding: 12px;
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    outline: none;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #a4cbb3;
+    /* Muted Orange */
+    color: #151313;
+    /* White text */
     border: none;
-    border-radius: 25px;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
-    background-color: white;
-    color: rgb(0, 245, 33);
-    transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+    /* Make button full width */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width */
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
 .log:hover {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(32, 50, 36);
     color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+    display: block;
+    filter: drop-shadow(0 0 10px white);
 }
 
-.reg {
-    margin-top: 1.5rem;
-    color: white;
-    font-size: 0.9rem;
-}
+
 
 .reg a {
     font-weight: bold;
     color: white;
     text-decoration: none;
+}
+
+.input-field:hover,
+.login-button:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
